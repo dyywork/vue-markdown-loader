@@ -1,6 +1,6 @@
 {
-  "name": "vue-markdown-loader",
-  "version": "2.5.0",
+  "name": "dingyongya-vue-markdown-loader",
+  "version": "2.5.1",
   "description": "markdown file to vue component loader.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QingWei-Li/vue-markdown-loader.git"
+    "url": "git+https://github.com/dyywork/vue-markdown-loader.git"
   },
   "keywords": [
     "vue",
@@ -16,12 +16,12 @@
     "webpack",
     "loader"
   ],
-  "author": "qingwei-li <qingwei.li@gmail.com>",
-  "license": "WTFPL",
+  "author": "yongya-ding <dyywork_dyy@163.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/QingWei-Li/vue-markdown-loader/issues"
+    "url": "https://github.com/dyywork/vue-markdown-loader/issues"
   },
-  "homepage": "https://github.com/QingWei-Li/vue-markdown-loader#readme",
+  "homepage": "https://github.com/dyywork/vue-markdown-loader#readme",
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
     "highlight.js": "^11.3.1",
@@ -42,6 +42,7 @@
     "vue-loader": "^12.1.0",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.3.1"
   }
 }

@@ -26,11 +26,11 @@ https://glitch.com/edit/#!/vue-markdown
 
 ```bash
 # For Vue1
-npm i vue-markdown-loader@0 -D
+npm i dingyoangya-vue-markdown-loader@0 -D
 
 # For Vue2
-npm i vue-markdown-loader -D
-npm i  vue-loader vue-template-compiler -D
+npm i dingyoangya-vue-markdown-loader -D
+npm i  vue-loader dingyoangya-vue-template-compiler -D
 ```
 
 ## Feature
@@ -51,7 +51,7 @@ module.exports = {
     rules: [
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader'
+        loader: 'dingyoangya-vue-markdown-loader'
       }
     ]
   }
@@ -77,7 +77,7 @@ module.exports = {
             loader: 'vue-loader'
           },
           {
-            loader: 'vue-markdown-loader/lib/markdown-compiler',
+            loader: 'dingyoangya-vue-markdown-loader/lib/markdown-compiler',
             options: {
               raw: true
             }
@@ -102,8 +102,8 @@ module.exports = {
       .use('vue-loader')
       .loader('vue-loader')
       .end()
-      .use('vue-markdown-loader')
-      .loader('vue-markdown-loader/lib/markdown-compiler')
+      .use('dingyoangya-vue-markdown-loader')
+      .loader('dingyoangya-vue-markdown-loader/lib/markdown-compiler')
       .options({
         raw: true
       })
@@ -120,7 +120,7 @@ Since `v2.0.0`, this loader will automatically extract script and style tags fro
 ```js
 {
   test: /\.md$/,
-  loader: 'vue-markdown-loader',
+  loader: 'dingyoangya-vue-markdown-loader',
   options: {
     preventExtract: true
   }
@@ -134,9 +134,24 @@ You can customize wrapper tag no matter html element tag or vue component tag. D
 ```js
 {
   test: /\.md$/,
-  loader: 'vue-markdown-loader',
+  loader: 'dingyoangya-vue-markdown-loader',
   options: {
     wrapper: 'article',
+  }
+}
+
+```
+
+### `script`
+
+可以解决一个md里面有多个script 的问题，注意：方法和属性的名称要是不同的否则会被前面的覆盖
+It can solve the problem of multiple scripts in an MD. note: if the names of methods and attributes are different, they will be overwritten by the previous ones
+```js
+{
+  test: /\.md$/,
+  loader: 'dingyoangya-vue-markdown-loader',
+  options: {
+      script: true,
   }
 }
 ```
@@ -151,7 +166,7 @@ reference [markdown-it](https://github.com/markdown-it/markdown-it#init-with-pre
     rules: [
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader',
+        loader: 'dingyoangya-vue-markdown-loader',
         options: {
           // markdown-it config
           preset: 'default',
@@ -191,7 +206,7 @@ module.exports = {
     rules: [
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader',
+        loader: 'dingyoangya-vue-markdown-loader',
         options: markdown
       }
     ]
@@ -209,7 +224,7 @@ module.exports = {
     rules: [
       {
         test: /\.md$/,
-        loader: 'vue-markdown-loader'
+        loader: 'dingyoangya-vue-markdown-loader'
       }
     ]
   },
@@ -224,4 +239,4 @@ module.exports = {
 
 ## License
 
-WTFPL
+MIT
