@@ -1,6 +1,6 @@
 {
   "name": "dingyongya-vue-markdown-loader",
-  "version": "2.5.1",
+  "version": "2.5.3",
   "description": "markdown file to vue component loader.",
   "main": "index.js",
   "scripts": {
